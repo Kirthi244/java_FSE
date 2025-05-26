@@ -1,0 +1,47 @@
+<style>
+  .video-section {
+    text-align: center;
+    margin-top: 40px;
+  }
+
+  .video-section h2 {
+    font-size: 24px;
+    color: #343a40;
+    margin-bottom: 10px;
+  }
+
+  video {
+    display: block;
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+    border: 2px solid #007BFF;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  #videoMsg {
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: #28a745;
+    margin-top: 10px;
+  }
+</style>
+
+<div class="video-section">
+  <h2>Promo Video</h2>
+
+  <video controls oncanplay="document.getElementById('videoMsg').innerText = 'Video ready to play'">
+    <source src="promo.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <p id="videoMsg"></p>
+</div>
+
+<script>
+  window.onbeforeunload = function () {
+    return "Are you sure you want to leave?";
+  };
+</script>

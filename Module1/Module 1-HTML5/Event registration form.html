@@ -1,0 +1,176 @@
+<!-- Event Registration Form Section -->
+ <style>
+    /* Internal CSS */
+    #welcomeBanner {
+      background-color: lightblue;
+      padding: 10px;
+      text-align: center;
+      font-size: 1.2em;
+      margin-bottom: 20px;
+    }
+
+    .highlight {
+      background-color: yellow;
+      font-weight: bold;
+    }
+
+    .event-image {
+      border: 3px solid #333;
+      width: 150px;
+      height: 100px;
+      object-fit: cover;
+      display: block;
+      margin: 0 auto;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .enlarged {
+      transform: scale(2);
+      z-index: 10;
+      position: relative;
+    }
+
+    table.gallery {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+      text-align: center;
+    }
+
+    table.gallery td {
+      padding: 10px;
+      vertical-align: top;
+    }
+
+    table.gallery caption {
+      font-weight: bold;
+      margin-top: 8px;
+    }
+
+    #register {
+      max-width: 500px;
+      margin: 30px auto;
+      padding: 15px;
+      border: 2px solid #333;
+      border-radius: 10px;
+      background-color: #f9f9f9;
+    }
+
+    #register label {
+      font-weight: bold;
+    }
+
+    #register input,
+    #register select,
+    #register textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 4px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+
+    #register button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 1em;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    #register button:hover {
+      background-color: #0056b3;
+    }
+
+    #confirmation {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+      color: green;
+    }
+
+    #feeDisplay {
+      font-weight: bold;
+      margin-bottom: 15px;
+      color: #333;
+    }
+
+    #charCount {
+      font-size: 0.9em;
+      color: #555;
+      float: right;
+      margin-top: -28px;
+      margin-bottom: 15px;
+    }
+
+    #phoneError {
+      color: red;
+      font-weight: bold;
+      margin-top: 4px;
+      display: none;
+    }
+
+    #videoSection {
+      max-width: 600px;
+      margin: 40px auto;
+      text-align: center;
+    }
+
+    #videoMessage {
+      margin-top: 8px;
+      font-weight: bold;
+      color: green;
+    }
+  </style>
+    <section id="register">
+      <h2>Event Registration Form</h2>
+      <form id="registrationForm">
+        <label for="name">Name:</label><br />
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Your full name"
+          required
+          autofocus
+        /><br /><br />
+
+        <label for="email">Email:</label><br />
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="you@example.com"
+          required
+        /><br /><br />
+
+        <label for="eventDate">Event Date:</label><br />
+        <input type="date" id="eventDate" name="eventDate" required /><br /><br />
+
+        <label for="eventType">Event Type:</label><br />
+        <select id="eventType" name="eventType" required>
+          <option value="" disabled selected>Select an event</option>
+          <option value="clean-up">Community Clean-up</option>
+          <option value="charity-run">Charity Run</option>
+          <option value="food-drive">Food Drive</option>
+          <option value="art-festival">Art Festival</option>
+        </select><br /><br />
+
+        <label for="message">Message:</label><br />
+        <textarea
+          id="message"
+          name="message"
+          rows="4"
+          placeholder="Any special requests or questions?"
+        ></textarea
+        ><br /><br />
+
+        <button type="submit">Register</button><br /><br />
+
+        <output id="confirmation" for="registrationForm"></output>
+      </form>
+    </section>
